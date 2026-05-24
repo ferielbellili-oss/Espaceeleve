@@ -172,13 +172,12 @@
         svg { display:block; }
         @media(max-width:900px){.sidebar{width:66px}.logo-text,.logo-role,.nav-item span,.user-info,.nav-label{display:none}.main{margin-left:66px;padding:20px}}
         @media(max-width:600px){.students-grid{grid-template-columns:1fr 1fr}.stats-grid{grid-template-columns:1fr}}
-/* ── Layout messagerie ── */
+
 .msg-layout{display:grid;grid-template-columns:260px 1fr;gap:16px;height:calc(100vh - 180px);}
 .msg-channels{background:var(--surface);border:1px solid var(--border);border-radius:18px;display:flex;flex-direction:column;overflow:hidden;}
 .msg-channels-head{padding:16px 18px;border-bottom:1px solid var(--border);flex-shrink:0;}
 .msg-channel-list{overflow-y:auto;flex:1;padding:10px 8px;}
  
-/* ── Item canal ── */
 .msg-chan-item{display:flex;align-items:center;gap:10px;padding:11px 12px;border-radius:12px;cursor:pointer;transition:all .25s;border:1px solid transparent;margin-bottom:4px;}
 .msg-chan-item:hover{background:rgba(255,166,213,.07);border-color:var(--border);}
 .msg-chan-item.active{background:linear-gradient(135deg,rgba(255,166,213,.14),rgba(168,218,255,.09));border-color:rgba(255,182,218,.22);}
@@ -188,14 +187,13 @@
 .msg-chan-sub{font-size:11px;color:var(--text3);margin-top:2px;}
 .msg-chan-unread{margin-left:auto;min-width:18px;height:18px;background:linear-gradient(135deg,var(--pink),var(--blue));border-radius:9px;font-size:10px;font-weight:700;color:white;display:flex;align-items:center;justify-content:center;padding:0 5px;flex-shrink:0;}
  
-/* ── Zone chat ── */
 .msg-chat{background:var(--surface);border:1px solid var(--border);border-radius:18px;display:flex;flex-direction:column;overflow:hidden;position:relative;}
 .msg-empty-state{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;text-align:center;padding:40px;}
 .msg-chat-header{padding:14px 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-shrink:0;background:var(--surface);}
 .msg-messages-wrap{flex:1;overflow-y:auto;padding:18px 20px;display:flex;flex-direction:column;gap:3px;scroll-behavior:smooth;}
 .msg-messages-inner{display:flex;flex-direction:column;gap:2px;}
  
-/* ── Bulles de messages ── */
+
 .msg-bubble-wrap{display:flex;flex-direction:column;margin-bottom:10px;animation:msgIn .25s ease-out;}
 @keyframes msgIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 .msg-bubble-wrap.own{align-items:flex-end;}
@@ -241,6 +239,5 @@
 .msg-spinner{width:18px;height:18px;border:2px solid var(--border);border-top-color:var(--pink);border-radius:50%;animation:spin .7s linear infinite;flex-shrink:0;}
 @keyframes spin{to{transform:rotate(360deg)}}
  
-/* ── Scrollbar messagerie ── */
 .msg-messages-wrap::-webkit-scrollbar,.msg-channel-list::-webkit-scrollbar{width:4px;}
 .msg-messages-wrap::-webkit-scrollbar-thumb,.msg-channel-list::-webkit-scrollbar-thumb{background:var(--border);border-radius:4px;}
