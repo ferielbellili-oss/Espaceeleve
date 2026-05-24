@@ -333,7 +333,7 @@ async function loadEdt() {
       </div>
 
       ${jours.map(jour=>{
-        // Filtrage des cours par nom de jour
+      
         const cj = edt.filter(c=>c.jour.toLowerCase() === jour.toLowerCase());
         return `
         <div style="flex:0 0 ${CW}px;margin-right:${GAP}px">
@@ -357,10 +357,9 @@ async function loadEdt() {
                     return {...c, deb, fin, top, h};
                 }).filter(Boolean);
 
-                // ... (le reste de la logique de calcul des slots/chevauchements reste identique)
-                // [Gardez votre code de calcul des slots ici]
+             
                 return valid.map((c, i) => { 
-                    /* Votre code de rendu HTML du cours */ 
+                  
                     const th=colors[c.id%colors.length];
                     return `<div style="position:absolute;top:${c.top+2}px;left:3px;width:calc(100% - 6px);height:${c.h-4}px;background:${th.bg};border-left:3px solid ${th.br};border-radius:7px;padding:5px 7px;overflow:hidden;z-index:2;">
                         <div style="font-weight:700;color:#fff;font-size:11px;">${c.matiere_nom}</div>
